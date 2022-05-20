@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(39, 204, 204);
+}
+.calc {
+  border: 1px solid #DADADA;
+}
+.interface {
+  display: flex;
+  align-items: flex-end;
+}
+.process {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 20px;
+  line-height: 20px;
+  width: 240px;
+  height: 40px;
+  background: rgb(192, 163, 163);
+}
+.numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-end;
+}
+.window {
+  height: 40px;
+  grid-column: 1 / 4;
+}
+.window .input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 5px;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #DADADA;
+}
+.window .input:focus {
+  border-color: #9b9b9b;
+}
+.rotate,
+.result,
+.operation,
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  border: 1px solid #DADADA;
+  background: #ffffff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;      
+}
+.rotate:hover,
+.number:hover {
+  background: #dfdede;
+
+}
+.rotate:active,
+.number:active {
+  background: #c08181;
+
+}
+.result,
+.operation {
+  background: #F0F0F0;
+  
+}
+.clear:hover,
+.result:hover,
+.operation:hover {
+  background: rgb(148, 148, 148);
+}
+.clear:active,
+.result:active,
+.operation:active {
+  background: rgb(141, 108, 108);
+}
+.clear {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 40px;
+  border: 1px solid #DADADA;
+  background: #ffffff;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
