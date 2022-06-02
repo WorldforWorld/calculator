@@ -33,7 +33,6 @@ body {
 }
 .window {
   height: 40px;
-  grid-column: 1 / 4;
 }
 .window .input {
   display: flex;
@@ -49,6 +48,8 @@ body {
 .window .input:focus {
   border-color: #9b9b9b;
 }
+.square,
+.delete,
 .rotate,
 .result,
 .operation,
@@ -70,11 +71,13 @@ body {
   -khtml-user-select: none;
   user-select: none;      
 }
+.square:hover,
 .rotate:hover,
 .number:hover {
   background: #dfdede;
 
 }
+.square:active,
 .rotate:active,
 .number:active {
   background: #c08181;
@@ -85,22 +88,21 @@ body {
   background: #F0F0F0;
   
 }
+.delete:hover,
 .clear:hover,
 .result:hover,
 .operation:hover {
   background: rgb(148, 148, 148);
 }
+.delete:active,
 .clear:active,
 .result:active,
 .operation:active {
   background: rgb(141, 108, 108);
 }
 .clear {
-  position: absolute;
   width: 60px;
   height: 40px;
-  right: 0;
-  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,4 +119,7 @@ body {
   -moz-user-select: none;
   -khtml-user-select: none;
   user-select: none;
+}
+.delete img {
+  width: 20px;
 }
